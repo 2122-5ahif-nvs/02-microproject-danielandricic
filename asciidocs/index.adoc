@@ -33,8 +33,8 @@ den Artikel löschen.
 
 == Klassendiagramm
 
-image::images/Daily-News-cld.png[Class-diagram]
+image::Daily-News-cld.png[Class-diagram]
 
 == Use Case Diagramm
 
-image::images/Daily-News-ucd.png[Use-Case-diagram]
+image::Daily-News-ucd.png[Use-Case-diagram]
