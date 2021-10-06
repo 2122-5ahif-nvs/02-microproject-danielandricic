@@ -7,6 +7,6 @@ revealjs.zip
 gh-pages
 .idea/
 .DS_Store/
-build-html-docker.sh/
-build-pdf-docker.sh/
-publish-gh-pages.sh/
+build-html-docker.sh
+build-pdf-docker.sh
+publish-gh-pages.sh
