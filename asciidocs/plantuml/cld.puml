@@ -1,0 +1,31 @@
+@startuml
+Author  "1" <-right- "*" Article : writes >
+Reader "1" <-left- "*" Article : reads >
+
+class Author {
+    -id: Long
+    +firstName: String
+    +lastName: String
+    +birthDate: LocalDate
+
+    +void getFullName()
+    +String toString()
+}
+
+class Article {
+    -id: Long
+    +name: String
+    +content: String
+    +releaseDate: LocalDate
+    +authorID: Long
+}
+
+class Reader {
+    -id: Long
+    +firstName: String
+    +lastName: String
+    +birthDate: LocalDate
+
+    +String toString()
+}
+@enduml
