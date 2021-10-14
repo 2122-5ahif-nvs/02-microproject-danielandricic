@@ -7,11 +7,6 @@ import javax.transaction.Transactional;
 
 @ApplicationScoped
 public class ArticleRepository extends GenericRepository<Article> {
-
-    public ArticleRepository() {
-
-    }
-
     @Transactional
     public Article updateEntity(Article newArticle) {
         Article tmp = null;

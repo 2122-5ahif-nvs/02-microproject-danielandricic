@@ -173,11 +173,14 @@ public class ArticleService {
     @Consumes(MediaType.APPLICATION_JSON)
     public Response deleteArticle(Article article) {
 
-        if(repo.isPersistent(article))
-        repo.delete(article);
+        if(repo.isPersistent(article)) {
+            repo.delete(article);
+            repo.flush();
 
-        if(deletedArticle != null) {
-
+            return Response
+                    .ok()
+                    .header("tag", "Delete action was successfully!")
+                    .build();
         }
 
         return Response

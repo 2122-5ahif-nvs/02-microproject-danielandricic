@@ -6,6 +6,10 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Entity(name = "reader")
+@NamedQueries({
+        @NamedQuery(name = "Reader.findByLastName", query = "SELECT r FROM Reader r WHERE r.lastName = :lastname"),
+        @NamedQuery(name = "Reader.findByFirstName", query = "SELECT r FROM Reader WHERE r.firstName = :firstname")
+})
 public class Reader extends Person{
 
     @JsonbTransient

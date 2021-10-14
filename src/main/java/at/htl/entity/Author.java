@@ -9,6 +9,10 @@ import java.util.List;
 
 @Schema(name = "Author", description = "The author writes new articles, which is read by the reader.")
 @Entity(name = "author")
+@NamedQueries({
+        @NamedQuery(name = "Author.findByFirstName", query = "SELECT a FROM Author a WHERE a.firstName = :firstName"),
+        @NamedQuery(name = "Author.findLastName", query = "SELECT a FROM Author WHERE a.lastName = :lastName")
+})
 public class Author extends Person{
 
     @JsonbTransient
