@@ -33,8 +33,14 @@ den Artikel löschen.
 
 == Klassendiagramm
 
-image::Daily-News-cld.png[Class-diagram]
+[plantuml, cld, png]
+----
+include::plantuml/cld.puml[]
+----
 
 == Use Case Diagramm
 
-image::Daily-News-ucd.png[Use-Case-diagram]
+[plantuml, ucd, png]
+----
+include::plantuml/ucd.puml[]
+----

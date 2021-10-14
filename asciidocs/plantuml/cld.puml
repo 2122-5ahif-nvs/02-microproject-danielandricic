@@ -8,7 +8,7 @@ class Author {
     +lastName: String
     +birthDate: LocalDate
 
-    +void getFullName()
+    +String getFullName()
     +String toString()
 }
 
