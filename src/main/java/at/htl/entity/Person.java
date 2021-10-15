@@ -2,18 +2,16 @@ package at.htl.entity;
 
 import org.eclipse.microprofile.openapi.annotations.media.Schema;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Schema(name = "Person", description = "Person-class")
 @Entity(name = "person")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Person {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long _id;
 
     private String _firstName;
