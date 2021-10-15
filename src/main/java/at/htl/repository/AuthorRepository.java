@@ -3,9 +3,11 @@ package at.htl.repository;
 import at.htl.entity.Author;
 import at.htl.entity.Reader;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.transaction.Transactional;
 import java.util.List;
 
+@ApplicationScoped
 public class AuthorRepository extends GenericRepository<Author> {
 
     @Transactional

@@ -7,8 +7,8 @@ import java.util.List;
 
 @Entity(name = "reader")
 @NamedQueries({
-        @NamedQuery(name = "Reader.findByLastName", query = "SELECT r FROM Reader r WHERE r.lastName = :lastname"),
-        @NamedQuery(name = "Reader.findByFirstName", query = "SELECT r FROM Reader WHERE r.firstName = :firstname")
+        @NamedQuery(name = "Reader.findByLastName", query = "SELECT r FROM reader r WHERE r._lastName = :lastname"),
+        @NamedQuery(name = "Reader.findByFirstName", query = "SELECT r FROM reader r WHERE r._firstName = :firstname")
 })
 public class Reader extends Person{
 

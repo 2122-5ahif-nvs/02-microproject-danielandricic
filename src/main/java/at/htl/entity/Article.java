@@ -1,6 +1,5 @@
 package at.htl.entity;
 
-import javax.json.bind.annotation.JsonbProperty;
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -16,6 +15,12 @@ public class Article {
     private String _name;
     private String _content;
     private LocalDate _releaseDate;
+
+    @ManyToOne
+    private Author author;
+
+    @ManyToOne
+    private Reader reader;
 
     public Article(String name, String content, LocalDate releaseDate) {
         this._name = name;
